@@ -1,0 +1,41 @@
+/* property_details.css */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.property-info {
+    margin-bottom: 20px;
+}
+
+.carousel-inner img {
+    height: 400px; /* Adjust height as needed */
+    object-fit: cover;
+}
+
+.amenities-section, .ratings-section, .rules-section, .testimonials-section {
+    margin-top: 20px;
+}
+
+.rating-stars {
+    font-size: 1.5rem;
+    color: gold;
+}
+
+.rating-stars .fa-star {
+    margin-right: 2px;
+}
+
+.rating-stars .unfilled {
+    color: lightgray;
+}
+
+.testimonial {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
