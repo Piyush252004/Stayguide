@@ -47,7 +47,7 @@ export const AdminPannel = () => {
       const handleStateChange = (event) => {
         const state = event.target.value;
         const citySelect = document.getElementById('city');
-        citySelect.innerHTML = '<option value="">--- Select City ---</option>'; // Reset city dropdown
+        citySelect.innerHTML = '<option value="">--- Select City ---</option>';
         if (state && citiesByState[state]) {
           citiesByState[state].forEach((city) => {
             const option = document.createElement('option');
@@ -124,7 +124,16 @@ export const AdminPannel = () => {
           acNonAc: row.querySelector('select[name^="ac-non-ac"]').value
         }));
         formData.append('setupRooms', JSON.stringify(setupRooms));
-    
+
+        const amenities = {};
+        // document.querySelectorAll('#amenities input[type="checkbox"]').forEach((checkbox) => {
+        //   if (checkbox.checked) {
+        //     amenities[checkbox.id] = true;
+        //   }
+        // });
+        document.querySelectorAll('#amenities input[type="checkbox"]').forEach((checkbox) => {
+          amenities[checkbox.id] = checkbox.checked;
+        });
         formData.append('amenities', JSON.stringify(amenities));
     
         formData.append('rules', JSON.stringify(rules));

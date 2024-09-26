@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom"
+import axios from "axios";
 
 export const SignUp = () => {
   const [fullName, setFullName] = useState('');
@@ -14,6 +15,7 @@ export const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Call API or perform signup logic here
+    // axios.post('http://localhost:5000/adminSignup',{fullName, phone, email, password})
     console.log('Signup form submitted:', {
       fullName,
       phone,
@@ -23,6 +25,7 @@ export const SignUp = () => {
     });
     navigate('/login', {replace : true});
   };
+
 
   return (
     <Modal id="signup-modal" aria-labelledby="signup-heading" aria-hidden="true" show={true} onHide={() => console.log('Modal closed')}>

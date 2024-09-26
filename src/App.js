@@ -12,6 +12,7 @@ import { SignUp } from "./components/SignUp";
 import { Dashboard } from './components/admin/Dashboard'
 import { AdminPannel } from './components/admin/AdminPannel'
 import { First } from "./components/First";
+import { Sidebar } from './components/admin/Sidebar';
 
 
 // function App() {
@@ -287,8 +288,10 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        {/* <Route path='/admin-model' element={<AdminModel/>}/> */}
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="admin-pannel" element={< AdminPannel />}/>
+        <Route path='sidebar' element={< Sidebar />}/>
         <Route path="/" element={<First />} />
         <Route
           path="*"
@@ -298,7 +301,7 @@ function App() {
                 <Route path='/Roleselector' element={<RoleSelector />}/>
                 <Route path="home" element={<Home />} />
                 <Route path="about" element={<About />} />
-                <Route path="order-summary/:pgId" element={<OrderSummary />} />
+                <Route path="order-summary/:city" element={<OrderSummary />} />
                 {/* <Route path="first" element={<First />}></Route> */}
                 <Route path="*" element={<Nomatch />} />
               </Routes>

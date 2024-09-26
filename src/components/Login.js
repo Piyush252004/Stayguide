@@ -1,114 +1,6 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom'
-
-// export const Login = () => {
-//   return (
-//     <div
-//       style={{
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         height: '100vh',
-//         backgroundColor: '#f0f0f0',
-//       }}
-//     >
-//       <div
-//         style={{
-//           width: 400,
-//           backgroundColor: '#fff',
-//           padding: 20,
-//           borderRadius: 10,
-//           boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-//         }}
-//       >
-//         <h2
-//           style={{
-//             fontSize: 24,
-//             fontWeight: 'bold',
-//             marginBottom: 20,
-//             color: '#333',
-//           }}
-//         >
-//           Login to StayGuide
-//         </h2>
-//         <form>
-//           <div
-//             style={{
-//               marginBottom: 20,
-//             }}
-//           >
-//             <input
-//               type="email"
-//               name="email"
-//               placeholder="Email"
-//               required
-//               style={{
-//                 width: '100%',
-//                 padding: 10,
-//                 fontSize: 16,
-//                 border: 'none',
-//                 borderRadius: 5,
-//                 boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-//               }}
-//             />
-//           </div>
-//           <div
-//             style={{
-//               marginBottom: 20,
-//             }}
-//           >
-//             <input
-//               type="password"
-//               name="password"
-//               placeholder="Password"
-//               required
-//               style={{
-//                 width: '100%',
-//                 padding: 10,
-//                 fontSize: 16,
-//                 border: 'none',
-//                 borderRadius: 5,
-//                 boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-//               }}
-//             />
-//           </div>
-//           <div
-//             style={{
-//               marginBottom: 20,
-//             }}
-//           >
-//             <button
-//               type="submit"
-//               style={{
-//                 width: '100%',
-//                 padding: 10,
-//                 fontSize: 16,
-//                 backgroundColor: '#337ab7',
-//                 color: '#fff',
-//                 border: 'none',
-//                 borderRadius: 5,
-//                 cursor: 'pointer',
-//               }}
-//             >
-//               Login
-//             </button>
-//           </div>
-//           <div
-//             style={{
-//               fontSize: 14,
-//               color: '#666',
-//             }}
-//           >
-//             Don't have an account? <Link to="/SignUp" style={{ textDecoration: 'none', color: '#337ab7' }}>Signup</Link>
-//           </div>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export const Login = () => {
   const [email, setEmail] = useState('');
@@ -125,7 +17,7 @@ export const Login = () => {
       alert('Invalid email or password');
     }
   };
-
+  
   return (
     <div
       style={{

@@ -1,0 +1,76 @@
+.pg-details-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pg-details-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .pg-info {
+    margin-bottom: 20px;
+  }
+  
+  .pg-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .pg-rooms,
+  .pg-amenities,
+  .pg-rules {
+    margin-bottom: 20px;
+  }
+  
+  .pg-rooms h3,
+  .pg-amenities h3,
+  .pg-rules h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .pg-rooms ul,
+  .pg-amenities ul,
+  .pg-rules ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .pg-rooms li,
+  .pg-amenities li,
+  .pg-rules li {
+    margin-bottom: 10px;
+  }
+  
+  .pg-image {
+    margin-bottom: 20px;
+  }
+  
+  .pg-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  button {
+    border-radius: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
